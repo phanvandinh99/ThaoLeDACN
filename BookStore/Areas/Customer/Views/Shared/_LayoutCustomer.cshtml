@@ -1,0 +1,192 @@
+﻿@using BookStore.Models
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @*Chen link css*@
+
+    <link href="~/Assets/Content/NguoiDungCssLayout/fonts.css" rel="stylesheet" />
+    <link href="~/Assets/Content/NguoiDungCssLayout/screen.css" rel="stylesheet" />
+    @*Chen css thiet ke *@
+    <link href="~/Assets/Content/NguoiDungCssLayout/NguoiDungCssLayout.css" rel="stylesheet" />
+    @*Chen fort ky tu *@
+    <link href="~/Assets/Content/fortawesome/css/font-awesome.min.css" rel="stylesheet" />
+    @*Chèn link nivo slider*@
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Assets/NivoSlider/nivo-slider.css" rel="stylesheet" />
+    <script src="~/Assets/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Assets/NivoSlider/jquery.nivo.slider.js"></script>
+    <script src="~/Assets/NivoSlider/jquery.nivo.slider.pack.js"></script>
+
+</head>
+
+<body>
+    <div>
+
+        <section class="blank">
+            <div class="flash">
+                <div class="icDienThoai">
+                    <i class="fa fa-phone"></i>
+                    &nbsp;
+                    <i class="fa fa-facebook"></i>
+
+                </div>
+
+
+
+                <div class="DangKyDangNhap">
+                    @Html.Action("GioHangPartial", "GioHang")
+                    <i>&nbsp;</i>
+                    @if (Session["TaiKhoan"] != null)
+                    {
+                        KhachHang kh = (KhachHang)Session["TaiKhoan"];
+                        <i class="icon-signin"></i>
+                        @Html.ActionLink("Đăng Xuất", "DangXuat", "NguoiDung")
+                        <i>&nbsp;| </i>
+                        <b>Xin chào: @kh.HoTen</b>
+
+                    }
+                    else
+                    {
+                        <i class="icon-signin"></i>
+                        @Html.ActionLink("Đăng ký", "DangKy", "NguoiDung", null, htmlAttributes: new { @class = "DangKy" })
+                        <i class="icon-unlock"></i>
+                        @Html.ActionLink("Đăng nhập", "DangNhap", "NguoiDung", null, htmlAttributes: new { @class = "DangNhap" })
+                    }
+
+                </div>
+
+            </div>
+            @*Menu header*@
+            <div class="flash success" id="divDanhMuc">
+                @*Hộp thoại tìm kiếm*@
+                <div id="txtTimKiem">
+                    @using (Html.BeginForm("KetQuaTimKiem", "TimKiem", FormMethod.Post))
+                    {
+                        @Html.TextBox("txtTimKiem", "", htmlAttributes: new { @class = "TextBoxTimKiem", @placeholder = "Nhập vào từ khóa cần tìm ..." })
+                        @*Chèn vào image button hình ảnh*@
+                        <div id="divHinhAnhTimKiem">
+                            <button type="submit"><i class="icon-search"></i> </button>
+                        </div>
+                    }
+                </div>
+                @*Menu bên phải header*@
+                <ul class="navMenu">
+                    <li>
+                        <a href="@Url.Action("Index","Home")">Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="~/Assets/Home/GioiThieu">Giới thiệu</a>
+                    <li>
+                        <a href="#">Liên hệ</a>
+                    </li>
+                    <li>
+                        <a href="#">Hướng dẫn</a>
+                    </li>
+                    <li>
+                        <a href="#">Sách</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            @*Div menu bên trái *@
+            <div id="divMenuLeft">
+                @*Chèn vào partial view sách mới*@
+                <div class="activity">
+                    @Html.Action("SachMoiPartial", "Sach")
+                    @*Chèn vào partial view sách mới*@
+
+
+                </div>
+            </div>
+            @*Chèn div nivoslider*@
+            <div id="slider" class="nivoSlider">
+                <img src="~/Assets/HinhAnh/8.jpg" />
+                <img src="~/Assets/HinhAnh/Anh1.png" />
+                <img src="~/Assets/HinhAnh/8.jpg" />
+                <img src="~/Assets/HinhAnh/Anh2.png" />
+                <img src="~/Assets/HinhAnh/Anh3.png" />
+
+
+            </div>
+            <div style="clear:both"></div>
+        </section>
+        @*div body*@
+        <div id="NoiDung">
+            @RenderBody()
+        </div>
+        @*Pan chu de*@
+        <section>
+            <div>
+                @Html.Action("ChuDePartial", "ChuDe")
+            </div>
+
+        </section>
+        @*Dev nha xuat ban*@
+        <section class="blank items">
+            <div id="divLeft">
+                <div class="item">
+                    <img src="~/Assets/HinhAnh/4.jpg" />
+                    <div class="item-info" id="divNhaXuatBan">
+                        @*Action partialview*@
+                        @Html.Action("NhaXuatBanPartial", "NhaXuatBan")
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="divRight">
+                @RenderSection("NoiDungBenPhai", false)
+            </div>
+        </section>
+    </div>
+
+    <div>
+        <a href="#" class="button button-buy">Chào mừng bạn đến với trang web Giới thiệu sách của chúng tôi</a>
+    </div>
+    <div id="footer">
+        <div class="fLeft">
+            <p id="lh">TRƯỜNG ĐẠI HỌC THÔNG TIN LIÊN LẠC</p>
+            <p>
+
+                Tên SV: Lê Thị Phương Thảo   <br />
+                Lớp: ĐHCN4B<br />
+                KHOA: CÔNG NGHỆ THÔNG TIN – TCKGM<br />
+
+                GVHD: ThS. Phùng Bá Tâm
+            </p>
+            <!-- / class fLeft -->
+        </div>
+
+        <div class="fRight">
+            <ul>
+                <li><a href="@Url.Action("Index","Home")">Trang chủ</a></li>
+                <li><a href="@Url.Action( "DangKy", "NguoiDung")">Đăng ký</a></li>
+                <li><a href="@Url.Action("DangNhap", "NguoiDung")">Đăng Nhập</a></li>
+            </ul>
+            <p>Để cho đẹp nè</p>
+            <!-- / class fRight -->
+        </div>
+        <!-- / id footer -->
+    </div>
+
+    @*Script Chạy nivoslider*@
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                controlNav: false,
+                nextText: '',
+                prevText: ''
+            });
+        });
+    </script>
+
+</body>
+</html>
+
