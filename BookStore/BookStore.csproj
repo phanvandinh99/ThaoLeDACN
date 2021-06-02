@@ -137,6 +137,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\KhachHangsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NhanVienController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhapHangController.cs" />
     <Compile Include="Areas\Admin\Controllers\QuanLySanPhamController.cs" />
     <Compile Include="Areas\Customer\Controllers\ChuDeController.cs" />
@@ -427,6 +428,11 @@
     <Content Include="Areas\Admin\Views\KhachHangs\Details.cshtml" />
     <Content Include="Areas\Admin\Views\KhachHangs\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\KhachHangs\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\NhanVien\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\NhanVien\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\NhanVien\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\NhanVien\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\NhanVien\Index.cshtml" />
     <None Include="Assets\Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.min.js" />
