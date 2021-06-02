@@ -341,6 +341,7 @@
     <Content Include="Assets\Content\TemplateAdmin\widgets.html" />
     <Content Include="Assets\Content\TrangChuCss.css" />
     <Content Include="Assets\HinhAnhSP\100dktvl.jpg" />
+    <Content Include="Assets\HinhAnhSP\Anhlogoweb.jpeg" />
     <Content Include="Assets\HinhAnhSP\bbdmh.jpg" />
     <Content Include="Assets\HinhAnhSP\btcp.jpg" />
     <Content Include="Assets\HinhAnhSP\btnt.jpg" />
@@ -417,6 +418,9 @@
     <Content Include="Areas\Admin\Views\QuanLySanPham\ChinhSua.cshtml" />
     <Content Include="Areas\Admin\Views\QuanLySanPham\HienThi.cshtml" />
     <Content Include="Areas\Admin\Views\QuanLySanPham\Xoa.cshtml" />
+    <Content Include="Areas\Customer\Views\Home\GioiThieu.cshtml" />
+    <Content Include="Areas\Customer\Views\Home\LienHe.cshtml" />
+    <Content Include="Areas\Customer\Views\Home\HuongDan.cshtml" />
     <None Include="Assets\Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.min.js" />

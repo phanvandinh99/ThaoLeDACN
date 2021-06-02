@@ -67,7 +67,15 @@ namespace BookStore.Areas.Customer.Controllers
             //Nếu mà tồn tại thì chúng ta cho sửa số lượng
             if (sanpham != null)
             {
-                sanpham.iSoLuong = int.Parse(f["txtSoLuong"].ToString());
+                int a = int.Parse(f["txtSoLuong"].ToString());
+                if (sach.SoLuongTon < a)
+                {
+                    return Content("<script> alert(\"Số lượng trong kho không đủ\")</script>");
+                }
+                else
+                {
+                    sanpham.iSoLuong = int.Parse(f["txtSoLuong"].ToString());
+                }
 
             }
             return RedirectToAction("GioHang");
