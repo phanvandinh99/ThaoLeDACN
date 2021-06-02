@@ -7,10 +7,10 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Danh Sách Sản Phẩm Sách</h2>
 
 <p>
-    @Html.ActionLink("Thêm mới", "ThemMoi")
+    @Html.ActionLink("Thêm mới", "ThemMoi", "QuanLySanPham")
 </p>
 <table class="table">
     <tr>
@@ -61,9 +61,9 @@
                 @Html.DisplayFor(modelItem => item.Moi)
             </td>
             <td>
-                @Html.ActionLink("Chỉnh sửa", "ChinhSua", new { @MaSach = item.MaSach }) |
-                @Html.ActionLink("Hiển thị", "HienThi", new { @MaSach = item.MaSach }) |
-                @Html.ActionLink("Xóa", "Xoa", new { @MaSach = item.MaSach })
+                @Html.ActionLink("Chỉnh sửa", "ChinhSua", "QuanLySanPham", new { @MaSach = item.MaSach }, null) |
+                @Html.ActionLink("Hiển thị", "HienThi", "QuanLySanPham", new { @MaSach = item.MaSach }, null) |
+                @Html.ActionLink("Xóa", "Xoa", "QuanLySanPham", new { @MaSach = item.MaSach }, null)
             </td>
         </tr>
     }

@@ -96,7 +96,7 @@ namespace BookStore.Areas.Admin.Controllers
             ViewBag.MaChuDe = new SelectList(db.ChuDes.ToList().OrderBy(n => n.TenChuDe), "MaChuDe", "TenChuDe", sach.MaChuDe);
             ViewBag.MaNXB = new SelectList(db.NhaXuatBans.ToList().OrderBy(n => n.TenNXB), "MaNXB", "TenNXB", sach.MaNXB);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
 
         }
         //Hiển thị sản phẩm
@@ -129,7 +129,6 @@ namespace BookStore.Areas.Admin.Controllers
             return View(sach);
         }
         [HttpPost, ActionName("Xoa")]
-
         public ActionResult XacNhanXoa(int MaSach)
         {
             Sach sach = db.Saches.SingleOrDefault(n => n.MaSach == MaSach);
@@ -140,7 +139,7 @@ namespace BookStore.Areas.Admin.Controllers
             }
             db.Saches.Remove(sach);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Home");
 
         }
     }
