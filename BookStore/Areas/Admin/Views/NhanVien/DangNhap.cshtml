@@ -29,8 +29,8 @@
         @using (Ajax.BeginForm("DangNhap", "NguoiDung", new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "thongbao" }))
 
         {
-            <input type="text" class="user active" name="txtTenDangNhap"  placeholder="Tên đăng nhập" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}" />
-            <input type="password" class="lock active" name="txtMatKhau"  placeholder="Mật khẩu" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" />
+            <input type="text" class="user active" name="txtTenDangNhap" placeholder="Tên đăng nhập" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}" />
+            <input type="password" class="lock active" name="txtMatKhau" placeholder="Mật khẩu" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" />
 
             <div style="text-align:center;color: red" class="thongbao" id="thongbao">
                 @Html.AntiForgeryToken()
@@ -58,7 +58,7 @@
 
             <div class="social-icons">
 
-                <h4>Bạn Chưa Có Tài Khoản? <a href="/Customer/NguoiDung/DangKy"> Đăng Kí Ngay!</a></h4>
+                <h4>Bạn Chưa Có Tài Khoản? <a href=""> Đăng Kí Ngay!</a></h4>
 
             </div>
         </div>
@@ -86,4 +86,6 @@
 
         }
     </div>*@
+
+
 

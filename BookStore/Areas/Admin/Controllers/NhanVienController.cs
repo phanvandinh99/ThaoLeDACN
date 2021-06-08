@@ -123,5 +123,83 @@ namespace BookStore.Areas.Admin.Controllers
             }
             base.Dispose(disposing);
         }
+        #region controll Đăng kí và đăng nhập
+        //Đăng nhập
+        [HttpGet]
+        public ActionResult DangNhap()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult DangNhap(FormCollection f)
+        {
+            // Kiểm tra tên đăng nhập và mật khẩu
+            string ssTaiKhoan = f["txtTenDangNhap"].ToString();
+            string ssMatKhau = f["txtMatKhau"].ToString();
+            if (ssTaiKhoan == "")
+            {
+                ModelState.AddModelError("", "Bạn không được bỏ trống tên đăng nhập !");
+            }
+            if (ssMatKhau == "")
+            {
+                ModelState.AddModelError("", "Bạn không được bỏ trống mật khẩu !");
+            }
+            //trường hợp user đúng, pass đúng
+            NhanVien nv = db.NhanViens.FirstOrDefault(n => n.TaiKhoanNV == ssTaiKhoan && n.MatKhauNV == ssMatKhau);
+
+            if (nv != null) // có nhập vào 2 ô text box
+            {
+                var updateNhanVien = db.NhanViens.FirstOrDefault(n => n.TaiKhoanNV == nv.TaiKhoanNV);
+                if (updateNhanVien.TrangThai > 3)
+                {
+                    ModelState.AddModelError("", "Tài khoản của bạn đã bị khóa !");
+                }
+                else
+                {
+                    Session["TaiKhoanNV"] = nv;
+                    return RedirectToAction("Index", "Home");
+                    // kết thúc sự kiện trả về index
+                }
+            }
+            else
+            {
+                //trường hợp user đúng, pass sai
+                NhanVien nv2 = db.NhanViens.FirstOrDefault(n => n.TaiKhoanNV == ssTaiKhoan && n.MatKhauNV != ssMatKhau);
+                if (ModelState.IsValid)
+                {
+                    if (nv2 != null)
+                    {
+                        var updateNhanVien = db.NhanViens.FirstOrDefault(n => n.TaiKhoanNV == nv2.TaiKhoanNV);
+                        if (updateNhanVien.TrangThai > 3)
+                        {
+                            ModelState.AddModelError("", "Tài khoản của bạn đã bị khóa !");
+                        }
+                        else
+                        {
+                            NhanVien demlannhapsai = new NhanVien();
+
+                            updateNhanVien.TrangThai += 1;
+                            db.SaveChanges();
+                            ModelState.AddModelError("", "Sai Mật Khẩu !");
+                        }
+                    }
+                    else
+                    {
+                        ModelState.AddModelError("", "Tài Khoản Không Tồn tại !");
+                    }
+                }
+            }
+
+
+            return View();
+        }
+        //[ChildActionOnly]
+        public ActionResult DangXuat()
+        {
+            Session["TaiKhoanNV"] = null;
+            return RedirectToAction("Index", "Home");
+        }
+        #endregion
     }
 }

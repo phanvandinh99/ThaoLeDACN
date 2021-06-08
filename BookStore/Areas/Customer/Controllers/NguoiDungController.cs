@@ -50,7 +50,7 @@ namespace BookStore.Areas.Customer.Controllers
             // Kiểm tra tên đăng nhập và mật khẩu
             string ssTaiKhoan = f["txtTenDangNhap"].ToString();
             string ssMatKhau = f["txtMatKhau"].ToString();
-            if(ssTaiKhoan=="")
+            if (ssTaiKhoan == "")
             {
                 ModelState.AddModelError("", "Bạn không được bỏ trống tên đăng nhập !");
             }

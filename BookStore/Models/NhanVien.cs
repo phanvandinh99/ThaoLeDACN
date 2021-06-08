@@ -52,8 +52,8 @@
         [Display(Name = "Quê Quán")]
         public string QueQuan { get; set; }
 
-        [Display(Name = "Quyền")]
-        public int Quyen { get; set; }
+        [Display(Name = "Trạng Thái")]
+        public int TrangThai { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuNhap> PhieuNhaps { get; set; }
