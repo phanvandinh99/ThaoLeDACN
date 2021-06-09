@@ -123,5 +123,13 @@ namespace BookStore.Areas.Admin.Controllers
             }
             base.Dispose(disposing);
         }
+        // resert lại tài khoản nhân viên
+        public ActionResult ResertAccount(int id)
+        {
+            KhachHang khRA = db.KhachHangs.Find(id);
+            khRA.TrangThai = 0;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

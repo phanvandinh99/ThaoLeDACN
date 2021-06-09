@@ -139,6 +139,7 @@
     <Compile Include="Areas\Admin\Controllers\KhachHangsController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhanVienController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhapHangController.cs" />
+    <Compile Include="Areas\Admin\Controllers\QuanLyDonHangController.cs" />
     <Compile Include="Areas\Admin\Controllers\QuanLySanPhamController.cs" />
     <Compile Include="Areas\Customer\Controllers\ChuDeController.cs" />
     <Compile Include="Areas\Customer\Controllers\GioHangController.cs" />
@@ -434,6 +435,10 @@
     <Content Include="Areas\Admin\Views\NhanVien\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\NhanVien\Index.cshtml" />
     <Content Include="Areas\Admin\Views\NhanVien\DangNhap.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLyDonHang\XacNhan.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLyDonHang\DangGiao.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLyDonHang\DaGiao.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLyDonHang\DaHuy.cshtml" />
     <None Include="Assets\Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.min.js" />

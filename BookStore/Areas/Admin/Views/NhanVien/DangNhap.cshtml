@@ -26,7 +26,7 @@
         @*<form>*@
 
 
-        @using (Ajax.BeginForm("DangNhap", "NguoiDung", new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "thongbao" }))
+        @using (Ajax.BeginForm("DangNhap", "NhanVien", new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "thongbao" }))
 
         {
             <input type="text" class="user active" name="txtTenDangNhap" placeholder="Tên đăng nhập" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}" />
