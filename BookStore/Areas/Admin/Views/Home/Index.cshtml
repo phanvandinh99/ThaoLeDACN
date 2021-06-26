@@ -31,9 +31,9 @@
         <th>
             @Html.DisplayNameFor(model => model.First().SoLuongTon)
         </th>
-
-
         <th></th>
+
+
     </tr>
 
     @foreach (var item in Model)
@@ -57,9 +57,7 @@
                 @Html.DisplayFor(modelItem => item.SoLuongTon)
             </td>
 
-            <td>
-                @Html.DisplayFor(modelItem => item.Moi)
-            </td>
+       
             <td>
                 @Html.ActionLink("Chỉnh sửa", "ChinhSua", "QuanLySanPham", new { @MaSach = item.MaSach }, null) |
                 @Html.ActionLink("Hiển thị", "HienThi", "QuanLySanPham", new { @MaSach = item.MaSach }, null) |
