@@ -41,7 +41,7 @@ time, mark, audio, video {
 }
 /*Khi hover vào sản phẩm thì đổ màu khác*/
 #divBody #SanPham:hover {
-    background-color: red !important;
+    background-color: #f5f5f5 !important;
     color: black;
 }
 /* line 22, ../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
