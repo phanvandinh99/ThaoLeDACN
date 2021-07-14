@@ -4,7 +4,7 @@
 
 <link href="~/Content/TrangChuCss.css" rel="stylesheet" />
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Trang Chủ";
     Layout = "~/Areas/Customer/Views/Shared/_LayoutCustomer.cshtml";
 }
 @section NoiDungBenPhai{
@@ -62,10 +62,6 @@ Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/ @Model.Page
 <div class="MenuTrang" style="text-align:center">
     @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
 </div>
-
-
-
-
 <style>
     .MenuTrang li {
         display: inline;

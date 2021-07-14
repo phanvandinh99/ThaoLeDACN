@@ -36,5 +36,26 @@ namespace BookStore.Areas.Customer.Controllers
         {
             return View();
         }
+        public ActionResult SoLuongKhongDu()
+        {
+            return View();
+        }
+        public ActionResult ChinhSachBaoMat()
+        {
+            return View();
+        }
+
+        public ActionResult ChinhSachVanChuyen()
+        {
+            return View();
+        }
+        public ActionResult ChinhSachDoiTra()
+        {
+            return View();
+        }
+        public ActionResult ChinhSachMuaSi()
+        {
+            return View();
+        }
     }
 }

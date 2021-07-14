@@ -70,8 +70,8 @@ namespace BookStore.Areas.Customer.Controllers
                 int a = int.Parse(f["txtSoLuong"].ToString());
                 if (sach.SoLuongTon < a)
                 {
-                    return Content("<script> alert(\"Số lượng trong kho không đủ\")</script>");
-                }
+                    return RedirectToAction("SoLuongKhongDu", "Home");
+                    }
                 else
                 {
                     sanpham.iSoLuong = int.Parse(f["txtSoLuong"].ToString());

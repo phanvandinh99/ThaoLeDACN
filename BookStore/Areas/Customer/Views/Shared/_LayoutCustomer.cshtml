@@ -150,28 +150,14 @@
         <a href="#" class="button button-buy">Chào mừng bạn đến với trang web Giới thiệu sách của chúng tôi</a>
     </div>
 
-    <!--<div style="text-align: center; background-color: #dcdcdc">-->
-    @*<a>Chính sách bảo mật</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <a>Quy chế hoạt động</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <a>Chính sách vận chuyển</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <a>Chính sách trả hàng và hoàn tiền</a>*@
 
-    <!--<div class="container">-->
-    @*<div class="row">
-            <div class="col-lg-3">1</div>
-            <div class="col-lg-3">2</div>
-            <div class="col-lg-3">3</div>
-            <div class="col-lg-3">4</div>
-
-        </div>*@
-    <!--</div>
-
-    </div>-->
+    
     <div class="footer" style="background-color: #e7e7e7; text-align: center; padding-top: 20px">
-        <a>CHÍNH SÁCH BẢO MẬT</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <a>QUY CHẾ HOẠT ĐỘNG</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <a>CHÍNH SÁCH VẬN CHUYỂN</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-        <a>CHÍNH SÁCH TRẢ HÀNG HOÀN TIỀN</a>
+        @Html.ActionLink("CHÍNH SÁCH BẢO MẬT", "ChinhSachBaoMat", "Home") &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        @Html.ActionLink("CHÍNH SÁCH KHÁCH MUA SỈ", "ChinhSachMuaSi", "Home") &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        @Html.ActionLink("CHÍNH SÁCH VẬN CHUYỂN", "ChinhSachVanChuyen", "Home") &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        @Html.ActionLink("CHÍNH SÁCH TRẢ HÀNG HOÀN TIỀN", "ChinhSachDoiTra", "Home")
+
         <div class="center">
             <a href="http://online.gov.vn/Home/WebDetails/5452">
                 <img class="ty-pict cm-image" id="det_img_1618915505" src="https://nhasachphuongnam.com/images/promo/126/bo-cong-thuong-130x87_new1.png" alt="" title="">

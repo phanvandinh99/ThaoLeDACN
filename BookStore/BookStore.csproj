@@ -445,6 +445,11 @@
     <Content Include="Areas\Admin\Views\Kho\SachBanChay.cshtml" />
     <Content Include="Areas\Admin\Views\Kho\SachTon.cshtml" />
     <Content Include="Areas\Admin\Views\Kho\SachSapHet.cshtml" />
+    <Content Include="Areas\Customer\Views\Home\SoLuongKhongDu.cshtml" />
+    <Content Include="Areas\Customer\Views\Home\ChinhSachBaoMat.cshtml" />
+    <Content Include="Areas\Customer\Views\Home\ChinhSachVanChuyen.cshtml" />
+    <Content Include="Areas\Customer\Views\Home\ChinhSachDoiTra.cshtml" />
+    <Content Include="Areas\Customer\Views\Home\ChinhSachMuaSi.cshtml" />
     <None Include="Assets\Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.min.js" />
