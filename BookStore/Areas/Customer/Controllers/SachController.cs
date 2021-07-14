@@ -13,7 +13,7 @@ namespace BookStore.Areas.Customer.Controllers
         QuanLySachEntities db = new QuanLySachEntities();
         public PartialViewResult SachMoiPartial()
         {
-            var lstSachMoi = db.Saches.Take(3).ToList();
+            var lstSachMoi = db.Saches.ToList().OrderByDescending(n=>n.MaSach).Take(3);
             return PartialView(lstSachMoi);
         }
         //Xem chi tiết

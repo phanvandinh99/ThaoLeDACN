@@ -34,7 +34,7 @@
             {
                 i++;
                 <div id="SanPham" style="float:left;width:23%;margin-left:3%">
-                    <a href="@Url.Action("XemChiTiet", "Sach", new { @MaSach=item.MaSach })">  <div id="AnhBia"><img src="@Url.Content("~/HinhAnhSP/"+item.AnhBia)" width="100" height="150" /></div></a>
+                    <a href="@Url.Action("XemChiTiet", "Sach", new { @MaSach=item.MaSach })">  <div id="AnhBia"><img src="@Url.Content("~/Assets/HinhAnhSP/"+item.AnhBia)" width="100" height="150" /></div></a>
                     <div id="ThongTin">
                         @*Nếu tên sách dài hơn 30 ký tự thì chúng ta sẽ cắt tên sách ra lấy từ ký tự 0 đến ký tự 35*@
                         @if (item.TenSach.Length < 35)

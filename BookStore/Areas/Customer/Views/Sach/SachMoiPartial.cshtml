@@ -1,6 +1,6 @@
 ﻿@using BookStore.Models;
 @*Định nghĩa kiểu du liệu cho Medol*@
-@model List<Sach>
+@model IEnumerable<BookStore.Models.Sach>
 <h1 class="item-header">Sách mới</h1>
 @{
     foreach (var item in Model)
@@ -17,13 +17,9 @@
                 <p><strong title="@item.TenSach">Tiêu đề: @item.TenSach</strong><br /><a href="@Url.Action("XemChiTiet", new { @masach=item.MaSach })">Xem chi tiết</a></p>
                 <div class="clear"></div>
             }
-
         </div>
-
     }
-
 }
-
 <a href="#" class="item-footer green">
     Sách loại mới nhất
 </a>

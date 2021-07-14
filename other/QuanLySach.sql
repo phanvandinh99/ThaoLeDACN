@@ -119,20 +119,14 @@ values (N'TIN HỌC VĂN PHÒNG - CÔNG THỨC & HÀM EXCEL','36000',N'Tin Học
 
 - Theo dõi tình hình tài chính cá nhân bằng excel.',N'image_140616.jpg','01/01/2017','100','2','1');
 
-
-
 insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
 values (N'XỬ LÝ ẢNH PHOTOSHOP CS5 ','56160',N'Dù bạn là người đã biết hay chưa từng sử dụng phần mềm này, bộ sách Photoshop CS5 dành cho người tự học gồm 4 tập là những tài liệu bạn cần có để trở thành một chuyên gia xử lý hình ảnh. Với những hướng dẫn, minh họa rõ ràng sẽ giúp bạn nắm vững và khám phá các đặc tính mới của Photoshop CS5 và ứng dụng trong công việc thực tế một cách hiệu quả nhất.',N'image_106956.jpg','06/06/2013','30','2','1');
-
-
 
 insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
 values (N'CHÍ PHÈO ','35100',N'...Cả làng Vũ Đại nhao lên. Họ bàn tán rất nhiều về vụ án không ngờ ấy. Có kẻ mừng thầm. Không thiếu kẻ mừng ra mặt. Có người nói xa xôi: Trời có mắt đấy, anh em ạ!. Người khác thì nói toạc: Thằng nào chứ hai thằng ấy chết thì không ai tiếc! Rõ thật bọn chúng nó giết nhau, nào có phải cần đến tay người khác đâu...',N'image_67304.jpg','10/10/2014','5','7','2');
 
 insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
 values (N'SỐNG MÒN (TRÍ VIỆT)','40120',N'Sống mòn hoàn thành vào năm 1944, xuất bản ban đầu với tên gọi Chết mòn năm 1956. Trong tác phẩm, Nam Cao đã miêu tả sâu sắc tấn bi kịch tinh thần của người trí thức nghèo trong xã hội cũ. Họ là những người có ý thức rất cao về nhân phẩm và danh dự, có khát vọng - hoài bão văn chương lớn lao nhưng lại bị gánh nặng cơm áo gạo tiền bóp nghẹt sự sống.',N'image_113908.jpg','01/08/2016','12','7','2');
-
-
 
 insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
 values (N'LUẬT NGÂN HÀNG NHÀ NƯỚC VIỆT NAM','6640',N'Luật Ngân Hàng Nhà Nước Việt Nam',N'image_79415.jpg','01/04/2014','15','3','5');
@@ -161,8 +155,6 @@ values (N'Cô Gái Đến Từ Hôm Qua','57600',N'ô gái đến từ hôm qua 
 insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
 values (N'CUỐN THEO CHIỀU GIÓ','13500',N'Lấy bối cảnh từ cuộc nội chiến vô cùng khốc liệt giữa Bắc và Nam Mỹ, Cuốn Theo Chiều Gió với cốt truyện rõ ràng, logic, dễ hiểu, đã khắc họa một cách tài tình tâm trạng, tính cách và thân phận của nhiều lớp người trong chiến tranh và thời hậu chiến.',N'ctcg.jpg','11/12/2014','13','7','11');
 
-
-
 insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
 values (N'TUYỂN TẬP-TRỊNH CÔNG SƠN','15000',N'Nhạc của Trịnh Công Sơn không tuyền là nhạc, bài hát không chỉ là bài hát. ',N'tcs.jpg','01/01/2008','3','7','14');
 insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
@@ -187,6 +179,9 @@ values (N'GIẢI THÍCH NGỮ PHÁP TIẾNG ANH','85000',N'Sách được biên 
 
 insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
 values (N'BỮA TIỆC CỦA PINKIE','17100',N'',N'btcp.jpg','11/11/2016','30','5','7');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'ĐIỀU KHIỂN LOGIC LẬP TRÌNH PLC','35000',N'',N'dkltlg.jpg','12/11/2011','35','5','1');
 
 insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
 values (N'ĐIỀU KHIỂN LOGIC LẬP TRÌNH PLC','35000',N'',N'dkltlg.jpg','12/11/2011','35','5','1');
@@ -336,6 +331,31 @@ go
 	set SoLuongTon = SoLuongTon - 
 	(select SoLuong from inserted where MaSach = Sach.MaSach) +
 	(select SoLuong from deleted where maSach = Sach.MaSach)
+	from Sach
+	join deleted
+	on Sach.MaSach = deleted.MaSach
+end
+-- Trigger thêm số lượng sách mua trong bảng sách
+go
+ create trigger trg_SoLuongDaBan
+ on ChiTietDonHang
+ after insert
+ as
+ begin
+	update Sach
+	set SoLuongDaBan = SoLuongDaBan + (select SoLuong from inserted where MaSach = Sach.MaSach)
+	from Sach
+	join inserted
+	on Sach.MaSach = inserted.MaSach
+end
+go
+ create trigger trg_Tru_SoLuongDaBan
+ on ChiTietDonHang
+ after delete
+ as
+ begin
+	update Sach
+	set SoLuongDaBan = SoLuongDaBan - (select SoLuong from deleted where MaSach = Sach.MaSach)
 	from Sach
 	join deleted
 	on Sach.MaSach = deleted.MaSach

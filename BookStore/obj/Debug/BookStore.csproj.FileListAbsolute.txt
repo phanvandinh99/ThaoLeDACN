@@ -341,7 +341,6 @@ C:\Users\phanv\OneDrive\Máy tính\ThaoLeDACN\BookStore\bin\System.Web.WebPages.
 C:\Users\phanv\OneDrive\Máy tính\ThaoLeDACN\BookStore\bin\Newtonsoft.Json.xml
 C:\Users\phanv\OneDrive\Máy tính\ThaoLeDACN\BookStore\bin\Antlr3.Runtime.pdb
 C:\Users\phanv\OneDrive\Máy tính\ThaoLeDACN\BookStore\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\phanv\OneDrive\Máy tính\ThaoLeDACN\BookStore\obj\Debug\BookStore.csproj.AssemblyReference.cache
 C:\Users\phanv\OneDrive\Máy tính\ThaoLeDACN\BookStore\obj\Debug\BookStore.csproj.CoreCompileInputs.cache
 C:\Users\phanv\OneDrive\Máy tính\ThaoLeDACN\BookStore\obj\Debug\BookStore.csproj.CopyComplete
 C:\Users\phanv\OneDrive\Máy tính\ThaoLeDACN\BookStore\obj\Debug\BookStore.dll
