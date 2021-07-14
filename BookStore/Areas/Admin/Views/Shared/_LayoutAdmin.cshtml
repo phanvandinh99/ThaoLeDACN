@@ -11,6 +11,7 @@
     <link href="~/Assets/Content/TemplateAdmin/css/style.css" rel="stylesheet" />
     <link href="~/Assets/Content/TemplateAdmin/css/style-responsive.css" rel="stylesheet" />
     <link href="~/Assets/Content/font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
     @*Chèn scriptEditor*@
     <script src="~/Assets/tinymce/js/tinymce/tinymce.min.js"></script>
     <script>tinymce.init({ selector: 'textarea' });</script>
@@ -307,34 +308,55 @@
             <div id="sidebar-left" class="span2">
                 <div class="nav-collapse sidebar-nav">
                     <ul class="nav nav-tabs nav-stacked main-menu">
-                        <li><a href="@Url.Action("Index","Home")"><i class="icon-align-justify"></i><span class="hidden-tablet"> Sách</span></a></li>
+                        <li><a href="@Url.Action("Index","Home")">
+                            <i class="icon-book"></i>
+                            <span class="hidden-tablet"> Sách</span></a></li>
                         <li>
-                            <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Tài Khoản</span><span class="label label-important"> 2 </span></a>
+                            <a class="dropmenu" href="#">
+                                <i class="icon-group"></i><span class="hidden-tablet"> Tài Khoản</span>
+                                <i class="icon-angle-down" style="float:right"></i>
+                            </a>
                             <ul>
-                                <li><a class="submenu" href="@Url.Action("Index","KhachHangs")"><i class="icon-file-alt"></i><span class="hidden-tablet"> Khách Hàng</span></a></li>
-                                <li><a class="submenu" href="@Url.Action("Index","NhanVien")"><i class="icon-file-alt"></i><span class="hidden-tablet"> Nhân Viên</span></a></li>
+                                <li><a class="submenu" href="@Url.Action("Index","KhachHangs")"><i class="icon-calendar"></i> <span class="hidden-tablet"> Khách Hàng</span></a></li>
+                                <li><a class="submenu" href="@Url.Action("Index","NhanVien")"><i class="icon-calendar"></i><span class="hidden-tablet"> Nhân Viên</span></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="dropmenu" href="@Url.Action("XacNhan","QuanLyDonHang")"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Đơn Hàng</span><span class="label label-important"> 4 </span></a>
+                            <a class="dropmenu" href="#">
+                                <i class="icon-truck"></i>
+                                <span class="hidden-tablet"> Đơn Hàng</span>
+                                <i class="icon-angle-down" style="float:right"></i>
+                            </a>
                             <ul>
-                                <li><a class="submenu" href="@Url.Action("XacNhan","QuanLyDonHang")"><i class="icon-file-alt"></i><span class="hidden-tablet"> Đang Duyệt</span></a></li>
-                                <li><a class="submenu" href="@Url.Action("DangGiao","QuanLyDonHang")"><i class="icon-file-alt"></i><span class="hidden-tablet"> Đang Giao</span></a></li>
-                                <li><a class="submenu" href="@Url.Action("DaGiao","QuanLyDonHang")"><i class="icon-file-alt"></i><span class="hidden-tablet"> Đã Giao</span></a></li>
-                                <li><a class="submenu" href="@Url.Action("DaHuy","QuanLyDonHang")"><i class="icon-file-alt"></i><span class="hidden-tablet"> Đã Hủy</span></a></li>
+                                <li><a class="submenu" href="@Url.Action("XacNhan","QuanLyDonHang")"><i class="icon-truck"></i> <span class="hidden-tablet"> Đang Duyệt</span></a></li>
+                                <li><a class="submenu" href="@Url.Action("DangGiao","QuanLyDonHang")"><i class="icon-truck"></i> <span class="hidden-tablet"> Đang Giao</span></a></li>
+                                <li><a class="submenu" href="@Url.Action("DaGiao","QuanLyDonHang")"><i class="icon-truck"></i> <span class="hidden-tablet"> Đã Giao</span></a></li>
+                                <li><a class="submenu" href="@Url.Action("DaHuy","QuanLyDonHang")"><i class="icon-truck"></i> <span class="hidden-tablet"> Đã Hủy</span></a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="dropmenu" href="@Url.Action("XacNhan","QuanLyDonHang")"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Kho</span><span class="label label-important"> 4 </span></a>
+                            <a class="dropmenu" href="#">
+                                <i class="icon-bookmark-empty"></i>
+                                <span class="hidden-tablet"> Kho</span>
+                                <i class="icon-angle-down" style="float:right"></i>
+                            </a>
                             <ul>
-                                <li><a class="submenu" href="@Url.Action("XacNhan","QuanLyDonHang")"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sách Bán Chạy</span></a></li>
-                                <li><a class="submenu" href="@Url.Action("DangGiao","QuanLyDonHang")"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sách Tồn Kho</span></a></li>
-                                <li><a class="submenu" href="@Url.Action("DaGiao","QuanLyDonHang")"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sách Gần Hết </span></a></li>
-                                <li><a class="submenu" href="@Url.Action("NhapSach","NhapHang")"><i class="icon-file-alt"></i><span class="hidden-tablet"> Nhập Sách</span></a></li>
+                                <li><a class="submenu" href="@Url.Action("SachBanChay","Kho")"><i class="icon-book"></i><span class="hidden-tablet"> Sách Bán Chạy</span></a></li>
+                                <li><a class="submenu" href="@Url.Action("SachTon","Kho")"><i class="icon-book"></i><span class="hidden-tablet"> Sách Tồn</span></a></li>
+                                <li><a class="submenu" href="@Url.Action("SachSapHet","Kho")"><i class="icon-book"></i><span class="hidden-tablet"> Sách Sắp Hết</span></a></li>
+                                <li><a class="submenu" href="@Url.Action("NhapSach","NhapHang")"><i class="icon-download-alt"></i><span class="hidden-tablet"> Nhập Sách</span></a></li>
                             </ul>
                         </li>
-                        <li><a href="@Url.Action("Index","ThongKe")"><i class="icon-align-justify"></i><span class="hidden-tablet"> Thống Kê</span></a></li>
-
+                        <li>
+                            <a class="dropmenu" href="#">
+                                <i class="icon-bar-chart"></i><span class="hidden-tablet"> Thống Kê</span>
+                                <i class="icon-angle-down" style="float:right"></i>
+                            </a>
+                            <ul>
+                                <li><a class="submenu"><i class="icon-book"></i><span class="hidden-tablet"> Sách Bán Hôm Nay</span></a></li>
+                                <li><a class="submenu" href="@Url.Action("Index","ThongKe")"><i class="icon-list-alt"></i><span class="hidden-tablet"> Tổng Thống Kê</span></a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

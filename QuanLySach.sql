@@ -100,6 +100,7 @@ create table Sach
 	AnhBia nvarchar(max),
 	NgayCapNhat datetime default(getdate()),
 	SoLuongTon int,
+	SoLuongDaBan int default(0),
 	Moi int,
 
 	MaNXB int not null,
@@ -230,6 +231,7 @@ Create table NhanVien
 	SoDienThoai varchar(10) not null,
 	QueQuan nvarchar(500) not null,
 	Quyen int not null,
+	TrangThai int default(0),
 
 )
 go

@@ -40,6 +40,9 @@
         [Display(Name = "Số Lượng Tồn")]
         public int? SoLuongTon { get; set; }
 
+        [Display(Name = "Số Lượng Đã Bán")]
+        public int? SoLuongDaBan { get; set; }
+
         [Display(Name = "Mới")]
         public int? Moi { get; set; }
 
