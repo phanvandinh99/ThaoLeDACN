@@ -185,6 +185,140 @@ values (N'ĐIỀU KHIỂN LOGIC LẬP TRÌNH PLC','35000',N'',N'dkltlg.jpg','12/
 
 insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
 values (N'ĐIỀU KHIỂN LOGIC LẬP TRÌNH PLC','35000',N'',N'dkltlg.jpg','12/11/2011','35','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Hành Trang Lập Trình','140000',N'Cuốn sách gồm 2 nội dung chính:
+
+• Chương I: Phần này trình bày những suy nghĩ và kĩ năng mềm cần thiết để bạn có thể hòa nhập và tiến xa được trong lĩnh vực công nghệ phần mềm. Nội dung trong phần này lại được chia thành những mục nhỏ hơn tương ứng với từng giai đoạn học tập và làm việc:
+
+o Giai đoạn 1 – Học nghề: Trình bày những thái độ và kĩ năng học tập cần thiết để có thể học tập hiệu quả ở trường, cũng như chuẩn bị hành trang cho quá trình làm việc sau này.
+
+o Giai đoạn 2 – Vào nghề: Cung cấp một vài thông tin hữu ích liên quan tới việc tìm kiếm và ứng tuyển vào những công ty công nghệ, phần này cũng đưa ra vài góc nhìn liên quan tới việc đánh giá và so sánh nơi làm việc để bạn tìm ra được công ty phù hợp.
+
+o Giai đoạn 3 – Phát triển trong nghề: Sau khi đã tìm được nơi làm việc, phần này sẽ trình bày những suy nghĩ và cách tư duy làm việc để giúp bạn có thể tiến bộ hơn trong sự nghiệp lập trình viên.',N'hanhtranglaptrinh.jpg','12/11/2011','35','4','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Kỹ Thuật Lập Trình C','100000',N'Giáo Trình Kỹ Thuật Lập Trình C Cơ Sở Và Nâng Cao
+
+Cùng với sự phát triển như vũ bão của khoa học kỹ thuật nói chung, ngành Công nghệ Thông tin nói riêng đã và đang thâm nhập vào thực tiễn của mọi lĩnh vực trong cuộc sống và hoạt động của con người, trong đó công nghệ lập trình cũng không ngừng phát triển và ngày một ứng dụng rộng rãi hơn.Trong các ngôn ngữ lập trình, ngôn ngữ lập trình C từ lâu đã trở thành ngôn ngữ phổ biến vì tính đa dụng và linh hoạt của nó. Từ một nhà lập trình có tên tuổi cho đến một sinh viên công nghệ thông tin hoặc người yêu thích công nghệ thông tin đều không thể phủ nhận khả năng giải quyết vì xử lý nhanh một bài toán, từ đơn giản đến phức tạp, trên nhiều lĩnh vực khác nhau của ngôn ngữ C. Để đáp ứng nhu cầu mong muốn của nhiều bạn đọc, Nhà xuất bản Thông tin và Truyền thông trân trọng giới thiệu cuốn sách “Giáo trình Kỹ thuật lập trình C: Cơ sở và nâng cao” của PGS. TS Phạm Văn Ất, một tên tuổi quen thuộc với bạn đọc yêu thích ngôn ngữ C.',N'laptrinhc.jpg', default,'20','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Giáo Trình C++ Và Lập Trình Hướng Đối Tượng','250000',N'Giáo Trình C++ Và Lập Trình Hướng Đối Tượng
+
+Lập trình cấu trúc là phương pháp tổ chức, phân chia chương trình thành các hàm, thủ tục. Chúng được dùng để xử lý dữ liệu nhưng lại tách rời các cấu trúc dữ liệu.
+
+Lập trình hướng đối tượng dựa trên việc tổ chức chương trình thành các lớp. Khác với hàm và thủ tục, lớp là một đơn vị bao gồm cả dữ liệu và các phương thức xử lý.',N'giaotrinhc.jpg', default,'5','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Tớ Học Lập Trình','35000',N'Cẩm nang hướng dẫn hoàn chỉnh và đơn giản nhất dành cho bạn trẻ bắt đầu học lập trình
+
+Ngôn ngữ lập trình Scratch đặc biệt phù hợp cho bạn trẻ mới học, vì tính tương tác trực quan, đồ họa sống động, ra sản phẩm liền tay mà vẫn đảm bảo khoa học và liên thông tri thức sau này.
+
+Chỉ cần nắm và kéo các khối lệnh đầy màu sắc có sẵn để lắp ghép thành một kịch bản điều khiển các đối tượng trên màn hình.
+
+Không có những dòng lệnh logic khô cứng và dễ lỗi, những khái niệm kỹ thuật khó hiểu, những quy tắc luật lệ chằng chịt và mệt mỏi trong các ngôn ngữ lập trình kiểu người lớn.',N'tohoclaptrinh.jpg', default,'20','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Lập Trình Với Scratch 3.0 (Tái Bản 2019)','35000',N'Lập Trình Với Scratch 3.0
+
+“Lập trình với Scratch 3.0” là cuốn sách phiên bản mới của “Lập trình với Scratch” do VIETSTEM biên soạn. Dành riêng cho học sinh và người học bắt đầu làm quen với môn lập trình kéo thả. Thực hành - Trải nghiệm - Trực quan vẫn là phương pháp được áp dụng trong cách viết sách. Đặc biệt “Lập trình với Scratch 3.0” phù hợp cho các đơn vị, tổ chức giáo dục làm tài liệu giảng dạy cho học sinh.
+Mục đích cuốn sách
+
+Giới thiệu về ngôn ngữ lập trình kéo thả phổ biến nhất thế giới cho học sinh phổ thông, Scratch 3.0 (phiên bản mới, phát hành năm 2019). Cuốn sách kế thừa hoàn toàn những quan điểm về nội dung, cách trình bày của cuốn sách “Lập trình với Scratch” xuất bản năm 2016 tại NXBGD (viết cho phiên bản Scratch 2.0), đồng thời bổ sung những thông tin mới về giao diện, cách lập trình cũng như các khối lệnh của phiên bản Scratch 3.0.',N'scratch.jpg', default,'20','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Lập Trình Quỹ Đạo Cuộc Đời','35000',N'Lập trình Quỹ Đạo Cuộc Đời đem đến cho bạn những hệ tư duy khiến bạn hiểu vấn đề một cách tường tận qua những ví dụ và lập luận logic. Bạn có cơ hội được đi sâu khám phá bản chất của mọi hành vi. Mình muốn bạn trước khi phát triển bản thân, có thể nhận thức được mọi thứ rõ như ban ngày. Đọc vị được chính bạn, sau đó đến người khác và các chiến thuật tồn tại ở cái thế kỷ XXI hỗn loạn này.',N'quydaocuocdoi.jpg', default,'8','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Lập Trình ToT Với Arduino - Esp8266 Và Xbee','35000',N'Sách được biên soạn cho người đã làm quen với Arduino, qua các bài tập thực hành cơ bản điều khiển Led đơn, LCD, Led ma trận, động cơ DC, động cơ servo, động cơ bước nay muốn lập trình hệ thống nhúng cũng như lập trình IOT nâng cao qua những ứng dụng điều khiển và thu nhận dữ liệu từ xa qua truyền không dâu (Wifi).
+
+Tương ứng với từng bài tập đều có mã (code) chương trình với những giải thích giúp người học dễ theo dõi, cho phép một người có kiến thức cơ bản về Điện - Điện tử có thể từ ba tới năm ngày thực hành là bắt đầu khai thác và sử dụng Arduino trong lập trình IOT.',N'Arduino.jpg', default,'20','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Ứng Xử Thông Minh Lập Trình Sự Nghiệp','35000',N'Trong văn phòng của bạn, sư cạnh tranh có thể không khôc liệt đến mức khiến người này tranh kẻ kia cướp, tuy nhiên nếu như bạn không muốn bản thân mình bị tổn thương, muốn công việc được giải quyết một cách thuận lợi và có một sự nghiệp tươi sáng, hãy là ngừoi thông minh trong giao tiếp, ứng xử với cấp trên, với đồng nghiệp và với khách hàng. Bên cạnh đó, hiểu rõ và biết cách nâng cao giá trị của bản thân, xây dựng cho mình một hình tượng chuyên nghiệp, khi cơ hội đến chỉ cần nhanh chóng nắm bắt, bạn sẽ trở thành một nhân vật sáng giá, không ai có thể thay thế được nơi công sở.
+
+Minh họa độc đáo, ví dụ cụ thể, cùng những lời khuyên hữu ích, Ứng xử thông minh, lập trình sự nghiệp là cuốn sách chứa đựng đầy đủ những bài học cần biết về ứng xử và xây dựng hình ảnh bản thân dành cho những nhân viên trẻ, những người mới đi làm trong môi trường công sở.',N'laptrinhsunghiep.jpg', default,'20','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Lập Trình Windows Form Và Web Form Với C#','35000',N'Sách gồm 3 phần:
+Phần 1: Ứng dụng Windows form
+Phần 2: Xây dụng ứng dụng quản lý bán hàng
+Phần 3: Xây dụng ứng dụng quản lý tuyển sinh',N'winform.jpg', default,'6','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Người Trong Muôn Nghề: Ngành It Có Gì?','130000',N'"Học công nghệ thông tin rồi đi lắp máy tính với cài win dạo à?"
+
+"Sao lại lao đầu vào cái nghề toàn số má với mấy dòng lệnh khó hiểu thế?"
+
+"Dân làm máy tính vừa “đụt” vừa khô khan, ai yêu nổi, yêu nổi ai?"
+
+"Lập trình khó lắm, chắc phải siêu sao toán mới học được."
+
+"Làm công nghệ lương nghìn đô như bỡn!"
+
+Đó chắc hẳn là những câu hội thoại, những lời đánh giá mà các bạn đang học/làm Công nghệ thông tin (CNTT) gặp phải ít nhất 1 lần trong đời, còn những người không theo học/làm CNTT từng nghĩ đến ít nhất 1 lần trong đời (trung thực với bản thân và thừa nhận đi!).
+
+Trong quá trình thực hiện bộ sách hướng nghiệp cho các bạn trẻ, chúng tôi cũng không ngừng trăn trở: Ngành CNTT có thật sự như vậy không? Làm sao để giúp các bạn trẻ có được một cái nhìn toàn diện và khách quan nhất về lĩnh vực rộng lớn này? Những cuốn sách về CNTT hiện có trên thị trường thường là tài liệu nặng tính kỹ thuật dành cho dân chuyên ngành, hoặc những bài viết ngắn với thông tin khá chung chung, hoặc chỉ có góc nhìn từ một cá nhân nên thiếu tính đa chiều. Vậy là nhóm độc giả nằm “lưng chừng” như những bạn học sinh cấp 3, sinh viên Đại học và các bậc phụ huynh đang quan tâm, muốn tìm hiểu về ngành CNTT bị bỏ mặc “bơ vơ”, biết đọc gì đây?',N'nguoitrongmuonnghe.jpg', default,'10','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Code Dạo Kí Sự - Lập Trình Viên Đâu Phải Chỉ Biết Code','35000',N'Nếu các bạn có đọc các blog về lập trình ở Việt Nam thì có lẽ cái tên Tôi đi code dạo không có gì quá xa lạ đối với các bạn.
+
+Về tác giả của blog Tôi đi code dạo, anh tên thật là Phạm Huy Hoàng, một Developer Full Stack, cựu sinh viên trường FPT University, hiện tại anh đang học Thạc sĩ Computer Science tại Đại học Lancaster ở Anh (học bổng $18000). Trước khi qua Xứ Sở Sương Mù, anh đã từng làm việc tại FPT Software và ASWIG Solutions.',N'codedao.jpg', default,'9','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Chạy Đua Với Robot','35000',N'Nhân loại đang trải qua một cuộc cách mạng khác trong cách loài người làm việc và kiếm sống – và một lần nữa, cuộc cách mạng này lại đốt bỏ những điều tưởng chừng hiển nhiên của quá khứ trong đống tro tàn lịch sử. Một lần nữa, công nghệ mới đã tạo tiền đề cho cách mạng. Nhưng thay vì là hạt giống, là máy dệt, hay là đầu máy hơi nước; động cơ của cuộc cách mạng này là công nghệ kỹ thuật số và robot.',N'chayduavoirobot.jpg', default,'1','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Hello World - Làm Người Trong Kỷ Nguyên Máy Móc','35000',N'“Hello World” là một đoạn mang tính nghi thức của những người học lập trình, nhiệm vụ đầu tiên của một người mới học là lập trình sao cho máy tính hiện ra cụm từ này. Nhưng đồng thời nó cũng là một lời nhắc nhở về thời khắc của cuộc đối thoại giữa con người và máy tính trong kỷ nguyên máy móc, đánh dấu sự khởi đầu của một mối quan hệ mà một bên không thể tồn tại nếu thiếu bên kia.',N'helloword.jpg', default,'20','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'AI - Trí Tuệ Nhân Tạo - 101 Điều Cần Biết Về Tương Lai','35000',N'Chính xác thì AI - trí tuệ nhân tạo là gì?
+• Cách mạng Công nghiệp Lần thứ Tư là gì và nó liên quan đến trí tuệ nhân tạo như thế nào?
+• Trí tuệ nhân tạo sẽ làm biến đổi những ngành nghề nào và biến đổi ra sao?
+• Trí tuệ nhân tạo đang thay đổi thị trường lao động và việc làm theo hướng nào?
+• Robot, xe hơi tự hành và cuộc sống của chúng ta?
+• Cuộc chạy đua trí tuệ nhân tạo của các công ty công nghệ lớn
+• Liệu trí tuệ nhân tạo có thể giúp chúng ta đạt được hoà bình thế giới? Hay chúng có khơi mào cho một cuộc chiến tranh công nghệ?
+• Ta có thể chuẩn bị gì cho kỉ nguyên AI?',N'ai.jpg', default,'20','6','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Huyễn Tưởng Về Trí Tuệ Nhân Tạo','100000',N'Loài người đang bước vào kỷ nguyên máy móc, thời đại của Dữ liệu lớn, chứng kiến những khả năng siêu phàm mà máy tính đạt được: sở hữu bộ nhớ hoàn hảo, khả năng thu thập, xử lý và truy xuất lượng thông tin khổng lồ với tốc độ nhanh chóng mặt. Điều này đã khiến nhiều người lo sợ cho tương lai của nhân loại, một nỗi sợ hãi được bồi thêm và kích động bởi hàng loạt tên sách và phim ảnh giật gân.
+
+Nhưng, bằng những lập luận, bằng chứng thông minh, dí dỏm từ các ví dụ thực tiễn trong kinh tế, chính trị, thống kê xã hội học, Gary Smith sẽ chứng minh cho chúng ta thấy, nỗi lo sợ đó đầy màu sắc huyễn tưởng.',N'huyentuongvetrituenhantao.jpg', default,'2','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'Phân Tích Dữ Liệu Với R (Tái Bản 2019)','35000',N'Cuốn sách bạn đang cầm trên tay là một nổ lực nhằm giới thiệu các phương pháp phân tích mô hình và thống kê phổ biến. các phương pháp gồm mô hình hồi qui tuyết tính, hồi qui logistic, phân tích tổng hợp (meta - anlysis), mô hình phân tích sống còn (survival anlysis), phương pháp phân tích chuỗi dữ liệu theo thời gian (time series data) phương pháp bayes, phương pháp bootstrap, v.v.. Với một nội dung khá rộng như thế, cuốn sách này sẽ giúp ích cho các nhà nghiên cứu, giảng viên cao đẳng và đại học, sinh viên, hay bất cứ ai muốn học về thống kê và phương pháp phân tích dữ liệu.',N'dulieur.jpg', default,'18','5','1');
+
+insert into Sach(TenSach, GiaBan, MoTa, AnhBia, NgayCapNhat, SoLuongTon, MaNXB, MaChuDe) 
+values (N'AI Trong Marketing','35000',N'Trong những năm gần đây, AI đã thúc đẩy sự phát triển nhảy vọt của các phương thức kinh doanh. Khi mà tối ưu hóa, tự động hóa quy trình sản xuất và hậu cần đang trở thành trọng tâm của Công nghiệp 4.0, AI ngày càng mở rộng phạm vi ảnh hưởng khi xâm nhập vào các quy trình quản lý, lập kế hoạch trong marketing và bán hàng, từ đó tạo tiền đề để công ty hướng đến ứng dụng dữ liệu và tự động hóa.
+
+Trong cuốn sách “AI trong Marketing”, Peter Gentsch sẽ cung cấp cho chúng ta những thông tin về lịch sử phát triển của AI, cũng như cách áp dụng nó vào các lĩnh vực như thu thập dữ liệu khách hàng và ước lượng rủi ro, từ đó tối ưu hóa hiệu quả kinh doanh và đem lại lợi nhuận lớn nhất cho doanh nghiệp.',N'aitrongmarketting.jpg', default,'20','5','1');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 go
 create table ChiTietDonHang
 (

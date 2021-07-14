@@ -1,8 +1,5 @@
 ﻿using BookStore.Models;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace BookStore.Areas.Customer.Controllers
@@ -19,6 +16,7 @@ namespace BookStore.Areas.Customer.Controllers
         //Sách theo chủ đề
         public ViewResult SachTheoChuDe(int MaChuDe = 0)
         {
+      
             //Kiểm tra chủ đề tồn tại hay không
             ChuDe cd = db.ChuDes.SingleOrDefault(n => n.MaChuDe == MaChuDe);
             if (cd == null)
@@ -27,11 +25,12 @@ namespace BookStore.Areas.Customer.Controllers
                 return null;
             }
             //Truy xuất danh sách các quyển sách theo chủ đề
-            List<Sach> lstSach = db.Saches.Where(n => n.MaChuDe == MaChuDe).OrderBy(n => n.GiaBan).ToList();
+            var lstSach = db.Saches.Where(n => n.MaChuDe == MaChuDe).OrderBy(n => n.GiaBan).ToList();
             if (lstSach.Count == 0)
             {
                 ViewBag.Sach = "Không có sách nào thuộc chủ đề này";
             }
+      
             //Gán danh sách chủ để
             ViewBag.lstChuDe = db.ChuDes.ToList();
             return View(lstSach);
