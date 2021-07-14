@@ -1,4 +1,5 @@
 ﻿using BookStore.Models;
+using PagedList;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -14,9 +15,12 @@ namespace BookStore.Areas.Customer.Controllers
             return PartialView(db.ChuDes.Take(5).ToList());
         }
         //Sách theo chủ đề
-        public ViewResult SachTheoChuDe(int MaChuDe = 0)
+        public ViewResult SachTheoChuDe(int? page, int MaChuDe = 0)
         {
-      
+            //Tạo biến số sản phẩm trên trang
+            int pageSize = 12;
+            //Tạo biến số trang
+            int pageNumber = (page ?? 1);
             //Kiểm tra chủ đề tồn tại hay không
             ChuDe cd = db.ChuDes.SingleOrDefault(n => n.MaChuDe == MaChuDe);
             if (cd == null)
@@ -33,7 +37,8 @@ namespace BookStore.Areas.Customer.Controllers
       
             //Gán danh sách chủ để
             ViewBag.lstChuDe = db.ChuDes.ToList();
-            return View(lstSach);
+            ViewBag.MaChuDe = MaChuDe; // Lấy mã chủ đề
+            return View(lstSach.ToPagedList(pageNumber, pageSize));
         }
         //Hiển thị các chủ đề và sách theo chủ đề đầu tiên
         public ViewResult DanhMucChuDe()

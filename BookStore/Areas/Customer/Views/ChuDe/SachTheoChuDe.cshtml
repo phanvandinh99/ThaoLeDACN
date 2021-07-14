@@ -1,6 +1,6 @@
 ﻿@using BookStore.Models;
-
-@model List<Sach>
+@using PagedList.Mvc;
+@model PagedList.PagedList<Sach>
 
 @*Css cho trang chủ ở trong thư mục content*@
 <link href="~/Content/TrangChuCss.css" rel="stylesheet" />
@@ -64,6 +64,7 @@
                     <br />
                 }
             }
+
         </div>
 
 
@@ -72,4 +73,12 @@
     }
 </div>
 <div style="clear:both"></div>
-
+<div class="MenuTrang" style="display: inline">
+    Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/ @Model.PageCount
+    @Html.PagedListPager(Model, page => Url.Action("SachTheoChuDe", "ChuDe", new { page = page, MaChuDe = ViewBag.MaChuDe }))
+</div>
+<style>
+    .MenuTrang li {
+        display: inline;
+    }
+</style>
