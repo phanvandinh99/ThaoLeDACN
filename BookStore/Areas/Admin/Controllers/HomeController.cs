@@ -17,7 +17,7 @@ namespace BookStore.Areas.Admin.Controllers
         {
             int pageNumber = (page ?? 1);
             int pageSize = 10;
-            var lst = db.Saches.ToList().OrderBy(n => n.MaSach);
+            var lst = db.Saches.ToList().OrderByDescending(n => n.MaSach);
             return View(lst.ToPagedList(pageNumber, pageSize));
         }
        

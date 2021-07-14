@@ -200,7 +200,7 @@ namespace BookStore.Areas.Customer.Controllers
             }
             db.SaveChanges();
             Session["GioHang"] = null;
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("DatHangThanhCong", "Home");
         }
         #endregion
 

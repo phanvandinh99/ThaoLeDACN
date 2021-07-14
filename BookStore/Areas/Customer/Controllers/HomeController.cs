@@ -57,5 +57,9 @@ namespace BookStore.Areas.Customer.Controllers
         {
             return View();
         }
+        public ActionResult DathangThanhCong()
+        {
+            return View();
+        }
     }
 }

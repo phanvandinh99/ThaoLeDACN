@@ -454,6 +454,7 @@
     <Content Include="Areas\Admin\Views\QuanLyDonHang\XemChiTietDonHang.cshtml" />
     <Content Include="Areas\Customer\Views\GioHang\XemGioHangSauKhiMua.cshtml" />
     <Content Include="Areas\Customer\Views\GioHang\XemChiTietDonHangDaMua.cshtml" />
+    <Content Include="Areas\Customer\Views\Home\DathangThanhCong.cshtml" />
     <None Include="Assets\Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.min.js" />
