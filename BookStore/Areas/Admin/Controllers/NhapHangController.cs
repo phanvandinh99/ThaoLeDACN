@@ -33,7 +33,7 @@ namespace BookStore.Areas.Admin.Controllers
             }
             db.ChiTietPhieuNhaps.AddRange(lstModel);
             db.SaveChanges();
-            return RedirectToAction("Home", "Index");
+            return RedirectToAction("Index", "Home");
         }
 
     }

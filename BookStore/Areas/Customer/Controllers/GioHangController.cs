@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -200,6 +201,67 @@ namespace BookStore.Areas.Customer.Controllers
             db.SaveChanges();
             Session["GioHang"] = null;
             return RedirectToAction("Index", "Home");
+        }
+        #endregion
+
+        #region Xem Giỏ Hàng
+        [HttpGet]
+        public ActionResult XemGioHangSauKhiMua()
+        {
+            if (Session["TaiKhoan"] == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            KhachHang kh = (KhachHang)Session["TaiKhoan"];
+            var XemDonHang = db.DonHangs.Where(n => n.MaKhachHang == kh.MaKhachHang).ToList();
+
+            //tblDonHang donhang = db.tblDonHangs.Find(n => n.);
+            //var Layid = db.tblDonHangs.Where(n => n.TaiKhoanKH == kh.TaiKhoanKH).ToList() as ;
+            //var layid = XemDonHang.ForEach;
+
+            //tblChiTietDonHang XemThongTin = db.tblChiTietDonHangs.Single(n => n.MaDonHang = XemDonHang);
+
+            return View(XemDonHang);
+        }
+
+        [HttpGet]
+        public ActionResult XemChiTiet(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            DonHang model = db.DonHangs.SingleOrDefault(n => n.MaDonHang == id);
+            // kiem tra don hang co ton tai khong
+            if (model == null)
+            {
+                return HttpNotFound();
+            }
+            //Lấy danh sách sản phẩm để hiển thị cho người dùng thấy
+            var lstChiTietDH = db.ChiTietDonHangs.Where(n => n.MaDonHang == id);
+            ViewBag.lstchitietDH = lstChiTietDH;
+            return View(model);
+
+        }
+        public ActionResult XemChiTietPartialView(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            DonHang model = db.DonHangs.SingleOrDefault(n => n.MaDonHang == 13);
+            // kiem tra don hang co ton tai khong
+            if (model == null)
+            {
+                return HttpNotFound();
+            }
+            //Lấy danh sách sản phẩm để hiển thị cho người dùng thấy
+            var lstChiTietDH = db.ChiTietDonHangs.Where(n => n.MaDonHang == 13);
+            ViewBag.lstchitietDH = lstChiTietDH;
+
+            return PartialView(model);
+
         }
         #endregion
     }

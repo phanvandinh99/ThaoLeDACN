@@ -144,6 +144,7 @@
     <Compile Include="Areas\Admin\Controllers\QuanLySanPhamController.cs" />
     <Compile Include="Areas\Admin\Controllers\ThongKeController.cs" />
     <Compile Include="Areas\Customer\Controllers\ChuDeController.cs" />
+    <Compile Include="Areas\Customer\Controllers\DonHangController.cs" />
     <Compile Include="Areas\Customer\Controllers\GioHangController.cs" />
     <Compile Include="Areas\Customer\Controllers\HomeController.cs" />
     <Compile Include="Areas\Customer\Controllers\NguoiDungController.cs" />
@@ -450,6 +451,8 @@
     <Content Include="Areas\Customer\Views\Home\ChinhSachVanChuyen.cshtml" />
     <Content Include="Areas\Customer\Views\Home\ChinhSachDoiTra.cshtml" />
     <Content Include="Areas\Customer\Views\Home\ChinhSachMuaSi.cshtml" />
+    <Content Include="Areas\Customer\Views\GioHang\XemChiTiet.cshtml" />
+    <Content Include="Areas\Admin\Views\QuanLyDonHang\XemChiTietDonHang.cshtml" />
     <None Include="Assets\Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.js" />
     <Content Include="Assets\Scripts\jquery-1.10.2.min.js" />
@@ -559,6 +562,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Customer\Data\" />
+    <Folder Include="Areas\Customer\Views\DonHang\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

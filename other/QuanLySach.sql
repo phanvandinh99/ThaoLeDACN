@@ -85,6 +85,12 @@ create table DonHang
 	foreign key (MaKhachHang) references KhachHang(MaKhachHang) on delete cascade on update cascade,
 )
 go
+insert into DonHang (TinhTrangGiaoHang, NgayDat, NgayGiao, MaKhachHang) values ('0', '2/2/2021', '3/2/2021', 1);
+insert into DonHang (TinhTrangGiaoHang, NgayDat, NgayGiao, MaKhachHang) values ('1', '2/2/2021', '3/2/2021', 1);
+insert into DonHang (TinhTrangGiaoHang, NgayDat, NgayGiao, MaKhachHang) values ('2', '2/2/2021', '3/2/2021', 1);
+insert into DonHang (TinhTrangGiaoHang, NgayDat, NgayGiao, MaKhachHang) values ('3', '2/2/2021', '3/2/2021', 1);
+insert into DonHang (TinhTrangGiaoHang, NgayDat, NgayGiao, MaKhachHang) values ('0', '2/2/2021', '3/2/2021', 1);
+go
 create table Sach
 (
 	MaSach int identity(1,1) primary key,
@@ -409,26 +415,6 @@ Trong cuốn sách “AI trong Marketing”, Peter Gentsch sẽ cung cấp cho c
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 go
 create table ChiTietDonHang
 (
@@ -440,6 +426,10 @@ create table ChiTietDonHang
 	foreign key (MaDonHang) references DonHang(MaDonHang) on delete cascade on update cascade,
 	foreign key (MaSach) references Sach(MaSach) on delete cascade on update cascade,
 )
+go
+insert into ChiTietDonHang (MaDonHang, MaSach, SoLuong, DonGia) values (1,1,2,400000);
+insert into ChiTietDonHang (MaDonHang, MaSach, SoLuong, DonGia) values (1,2,2,400000);
+insert into ChiTietDonHang (MaDonHang, MaSach, SoLuong, DonGia) values (1,3,2,400000);
 go
 create table ThamGia
 (

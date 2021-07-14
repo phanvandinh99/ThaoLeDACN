@@ -34,9 +34,6 @@
                     <i class="fa fa-facebook"></i>
 
                 </div>
-
-
-
                 <div class="DangKyDangNhap">
                     @Html.Action("GioHangPartial", "GioHang")
                     <i>&nbsp;</i>
@@ -44,10 +41,14 @@
                     {
                         KhachHang kh = (KhachHang)Session["TaiKhoan"];
                         <i class="icon-signin"></i>
+
+                        @Html.ActionLink("Đơn Hàng", "XemChiTiet", "GioHang");
+                        <i>&nbsp;| </i>
+                        <i class="icon-signin"></i>
                         @Html.ActionLink("Đăng Xuất", "DangXuat", "NguoiDung")
                         <i>&nbsp;| </i>
                         <b>Xin chào: @kh.HoTen</b>
-
+                        @Html.ActionLink("Đơn Hàng", "XemChiTiet", "GioHang", new { @id = kh.MaKhachHang }, null);
                     }
                     else
                     {
@@ -151,7 +152,7 @@
     </div>
 
 
-    
+
     <div class="footer" style="background-color: #e7e7e7; text-align: center; padding-top: 20px">
         @Html.ActionLink("CHÍNH SÁCH BẢO MẬT", "ChinhSachBaoMat", "Home") &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
         @Html.ActionLink("CHÍNH SÁCH KHÁCH MUA SỈ", "ChinhSachMuaSi", "Home") &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
