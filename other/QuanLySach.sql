@@ -99,9 +99,9 @@ create table Sach
 	MoTa nvarchar(max),
 	AnhBia nvarchar(max),
 	NgayCapNhat datetime default(getdate()),
-	SoLuongTon int,
+	SoLuongTon int default(0),
 	SoLuongDaBan int default(0),
-	Moi int,
+	Moi int default(0),
 
 	MaNXB int not null,
 	MaChuDe int not null,

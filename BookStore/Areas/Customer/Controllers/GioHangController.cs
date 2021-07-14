@@ -184,7 +184,7 @@ namespace BookStore.Areas.Customer.Controllers
             List<GioHang> gh = LayGioHang();
             ddh.MaKhachHang = kh.MaKhachHang;
             ddh.NgayDat = DateTime.Now;
-            ddh.TinhTrangGiaoHang = 1;
+            ddh.TinhTrangGiaoHang = 0;
             ddh.DaThanhToan = 1;
             db.DonHangs.Add(ddh);
             db.SaveChanges();
@@ -212,9 +212,9 @@ namespace BookStore.Areas.Customer.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-
             KhachHang kh = (KhachHang)Session["TaiKhoan"];
-            var XemDonHang = db.DonHangs.Where(n => n.MaKhachHang == kh.MaKhachHang).ToList();
+
+            var XemDonHang = db.DonHangs.Where(n => n.MaKhachHang == kh.MaKhachHang).ToList().OrderByDescending(n=>n.MaDonHang);
 
             //tblDonHang donhang = db.tblDonHangs.Find(n => n.);
             //var Layid = db.tblDonHangs.Where(n => n.TaiKhoanKH == kh.TaiKhoanKH).ToList() as ;
@@ -244,24 +244,26 @@ namespace BookStore.Areas.Customer.Controllers
             return View(model);
 
         }
-        public ActionResult XemChiTietPartialView(int? id)
+
+        public ActionResult XemChiTietDonHangDaMua(int? id)
         {
+            // Kiểm tra id có hợp lệ không
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            DonHang model = db.DonHangs.SingleOrDefault(n => n.MaDonHang == 13);
-            // kiem tra don hang co ton tai khong
+            DonHang model = db.DonHangs.SingleOrDefault(n => n.MaDonHang == id);
+            //Kiểm tra đơn hàng có tồn tại không
             if (model == null)
             {
                 return HttpNotFound();
             }
-            //Lấy danh sách sản phẩm để hiển thị cho người dùng thấy
-            var lstChiTietDH = db.ChiTietDonHangs.Where(n => n.MaDonHang == 13);
-            ViewBag.lstchitietDH = lstChiTietDH;
+            //Lấy danh sách chi tiết đơn hàng để hiển thị cho người dùng thấy
+            var lstChiTietDH = db.ChiTietDonHangs.Where(n => n.MaDonHang == id);
 
-            return PartialView(model);
+            ViewBag.listchitietdonhang = lstChiTietDH;
 
+            return View(model);
         }
         #endregion
     }

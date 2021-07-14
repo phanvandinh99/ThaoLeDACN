@@ -33,17 +33,6 @@
         </div>
     </div>
     <br />
-
-
-    <div class="form-group">
-        @Html.LabelFor(model => model.NgayCapNhat, new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.NgayCapNhat)
-            @Html.ValidationMessageFor(model => model.NgayCapNhat)
-        </div>
-    </div>
-    <br />
-
     <div class="form-group">
         @Html.LabelFor(model => model.AnhBia, new { @class = "control-label col-md-2" })
         <div class="col-md-10">
@@ -51,14 +40,6 @@
             <input type="file" name="fileUpload">
             @*Thông báo trùng*@
             @ViewBag.ThongBao
-        </div>
-    </div>
-    <br />
-    <div class="form-group">
-        @Html.LabelFor(model => model.SoLuongTon, new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.SoLuongTon)
-            @Html.ValidationMessageFor(model => model.SoLuongTon)
         </div>
     </div>
     <br />
@@ -78,13 +59,7 @@
         </div>
     </div>
     <br />
-    <div class="form-group">
-        @Html.LabelFor(model => model.Moi, new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.Moi)
-            @Html.ValidationMessageFor(model => model.Moi)
-        </div>
-    </div>
+
 
 
     <div class="form-group">

@@ -41,7 +41,7 @@ namespace BookStore.Areas.Admin.Controllers
                 //Lưu tên file
                 var fileName = Path.GetFileName(fileUpload.FileName);
                 //Lưu đường dẫn của file
-                var path = Path.Combine(Server.MapPath("~/HinhAnhSP"), fileName);
+                var path = Path.Combine(Server.MapPath("~/Assets/HinhAnhSP"), fileName);
                 //Kiểm tra hình ảnh đã tồn tại chưa
                 if (System.IO.File.Exists(path))
                 {

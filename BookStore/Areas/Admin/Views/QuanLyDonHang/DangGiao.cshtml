@@ -38,6 +38,7 @@
             <td>@item.NgayGiao</td>
             <td>
                 @Html.ActionLink("Duyệt (Đã Giao)", "DaGiao", "QuanLyDonHang", new { id = item.MaDonHang }, null) |
+                @Html.ActionLink(" Hủy đơn hàng ", "XacNhanHuyDon", "QuanLyDonHang", new { id = item.MaDonHang }, null) |
                 @Html.ActionLink(" Chi Tiết", "XemChiTietDonHang", "QuanLyDonHang", new { id = item.MaDonHang }, null)
             </td>
         </tr>
