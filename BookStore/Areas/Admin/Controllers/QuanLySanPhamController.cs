@@ -51,6 +51,8 @@ namespace BookStore.Areas.Admin.Controllers
                 {
                     fileUpload.SaveAs(path);
                 }
+                sach.SoLuongDaBan = 0;
+                sach.SoLuongTon = 0;
                 sach.AnhBia = fileUpload.FileName;
                 db.Saches.Add(sach);
                 db.SaveChanges();
